@@ -5,8 +5,10 @@ import Spinner from "./Spinner";
 import styles from "./CityList.module.css";
 import { useCities } from "../Context/CitiesContext";
 function CityList() {
+  console.log("city list ");
+
   const { cities, isLoading } = useCities();
-  //   console.log(cities, isLoading);
+  console.log(cities, isLoading);
   if (isLoading) return <Spinner />;
 
   if (!cities.length)
